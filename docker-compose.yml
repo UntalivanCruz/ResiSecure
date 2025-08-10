@@ -1,0 +1,28 @@
+services:
+  postgres:
+    image: postgres:17.4
+    container_name: resisecure_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-resisecure}
+      POSTGRES_USER: ${POSTGRES_USER:-resisecure_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-resisecure_password}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - resisecure_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-resisecure_user} -d ${POSTGRES_DB:-resisecure}"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  resisecure_network:
+    driver: bridge

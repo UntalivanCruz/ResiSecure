@@ -1,0 +1,55 @@
+{
+  "id": "12f05494-1dd4-4c98-8b73-e1594a8d6871",
+  "template": "app",
+  "versions": {
+    "AbpFramework": "9.2.3",
+    "AbpStudio": "1.1.2",
+    "TargetDotnetFramework": "net9.0"
+  },
+  "modules": {
+    "ResiSecure": {
+      "path": "ResiSecure.abpmdl"
+    }
+  },
+  "runProfiles": {
+    "Default": {
+      "path": "etc/abp-studio/run-profiles/Default.abprun.json"
+    }
+  },
+  "options": {
+    "httpRequests": {
+      "ignoredUrls": [
+      
+      ]
+    }
+  },
+  "creatingStudioConfiguration": {
+    "template": "app",
+    "createdAbpStudioVersion": "1.1.2",
+    "tiered": "false",
+    "runInstallLibs": "true",
+    "useLocalReferences": "false",
+    "multiTenancy": "true",
+    "includeTests": "true",
+    "kubernetesConfiguration": "false",
+    "uiFramework": "angular",
+    "mobileFramework": "none",
+    "distributedEventBus": "none",
+    "databaseProvider": "ef",
+    "runDbMigrator": "true",
+    "databaseManagementSystem": "postgresql",
+    "separateTenantSchema": "false",
+    "createInitialMigration": "true",
+    "theme": "leptonx-lite",
+    "themeStyle": "",
+    "themeMenuPlacement": "",
+    "mobileFramework": "none",
+    "progressiveWebApp": "false",
+    "runProgressiveWebAppSupport": "false",
+    "publicWebsite": "false",
+    "socialLogin": "false",
+    "selectedLanguages": ["Español", "English", "简体中文", "Português (Brasil)", "Français", "Deutsch (Deutschland)", "Italiano", ],
+    "defaultLanguage": "Español",
+    "createCommand": "abp new ResiSecure -t app --ui-framework angular --database-provider ef --database-management-system postgresql --theme leptonx-lite --without-cms-kit --dont-run-bundling --no-social-logins -no-gdpr -no-openiddict-admin-ui -no-audit-logging -no-file-management -no-language-management -no-text-template-management"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "template": "app",
+  "imports": {
+    "Volo.Abp.LeptonXLiteTheme": {
+      "version": "4.2.3",
+      "isInstalled": true
+    },
+    "Volo.Abp.Account": {
+      "version": "9.2.3",
+      "isInstalled": true
+    },
+    "Volo.Abp.OpenIddict": {
+      "version": "9.2.3",
+      "isInstalled": true
+    },
+    "Volo.Abp.Identity": {
+      "version": "9.2.3",
+      "isInstalled": true
+    },
+    "Volo.Abp.TenantManagement": {
+      "version": "9.2.3",
+      "isInstalled": true
+    },
+    "Volo.Abp.SettingManagement": {
+      "version": "9.2.3",
+      "isInstalled": true
+    },
+    "Volo.Abp.PermissionManagement": {
+      "version": "9.2.3",
+      "isInstalled": true
+    },
+    "Volo.Abp.FeatureManagement": {
+      "version": "9.2.3",
+      "isInstalled": true
+    }
+  },
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "ResiSecure.Application": {
+      "path": "src/ResiSecure.Application/ResiSecure.Application.abppkg",
+      "folder": "src"
+    },
+    "ResiSecure.Application.Tests": {
+      "path": "test/ResiSecure.Application.Tests/ResiSecure.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "ResiSecure.Domain.Shared": {
+      "path": "src/ResiSecure.Domain.Shared/ResiSecure.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "ResiSecure.Application.Contracts": {
+      "path": "src/ResiSecure.Application.Contracts/ResiSecure.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "ResiSecure.HttpApi": {
+      "path": "src/ResiSecure.HttpApi/ResiSecure.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "ResiSecure.HttpApi.Client": {
+      "path": "src/ResiSecure.HttpApi.Client/ResiSecure.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "ResiSecure.EntityFrameworkCore.Tests": {
+      "path": "test/ResiSecure.EntityFrameworkCore.Tests/ResiSecure.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "ResiSecure.EntityFrameworkCore": {
+      "path": "src/ResiSecure.EntityFrameworkCore/ResiSecure.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "ResiSecure.TestBase": {
+      "path": "test/ResiSecure.TestBase/ResiSecure.TestBase.abppkg",
+      "folder": "test"
+    },
+    "ResiSecure.Domain.Tests": {
+      "path": "test/ResiSecure.Domain.Tests/ResiSecure.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "ResiSecure.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/ResiSecure.HttpApi.Client.ConsoleTestApp/ResiSecure.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "ResiSecure.DbMigrator": {
+      "path": "src/ResiSecure.DbMigrator/ResiSecure.DbMigrator.abppkg",
+      "folder": "src"
+    },
+    "ResiSecure.HttpApi.Host": {
+      "path": "src/ResiSecure.HttpApi.Host/ResiSecure.HttpApi.Host.abppkg",
+      "folder": "src"
+    },
+    "ResiSecure.Domain": {
+      "path": "src/ResiSecure.Domain/ResiSecure.Domain.abppkg",
+      "folder": "src"
+    }
+  }
+}
