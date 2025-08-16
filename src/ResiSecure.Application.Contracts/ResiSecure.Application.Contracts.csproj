@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ResiSecure.Domain.Shared\ResiSecure.Domain.Shared.csproj" />
+    <ProjectReference Include="..\ResiSecure.Domain\ResiSecure.Domain.csproj" />
   </ItemGroup>
   
   <ItemGroup>

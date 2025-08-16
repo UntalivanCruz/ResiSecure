@@ -13,6 +13,16 @@ public class ResiSecurePermissionDefinitionProvider : PermissionDefinitionProvid
 
         //Define your own permissions here. Example:
         //myGroup.AddPermission(ResiSecurePermissions.MyPermission1, L("Permission:MyPermission1"));
+        
+        var propertiesPermission = myGroup.AddPermission(ResiSecurePermissions.Properties.Default, L("Permission:Properties"));
+        propertiesPermission.AddChild(ResiSecurePermissions.Properties.Create, L("Permission:Properties.Create"));
+        propertiesPermission.AddChild(ResiSecurePermissions.Properties.Edit, L("Permission:Properties.Edit"));
+        propertiesPermission.AddChild(ResiSecurePermissions.Properties.Delete, L("Permission:Properties.Delete"));
+        
+        var householdsPermission = myGroup.AddPermission(ResiSecurePermissions.Households.Default, L("Permission:Households"));
+        householdsPermission.AddChild(ResiSecurePermissions.Households.Create, L("Permission:Households.Create"));
+        householdsPermission.AddChild(ResiSecurePermissions.Households.Edit, L("Permission:Households.Edit"));
+        householdsPermission.AddChild(ResiSecurePermissions.Households.Delete, L("Permission:Households.Delete"));
     }
 
     private static LocalizableString L(string name)
