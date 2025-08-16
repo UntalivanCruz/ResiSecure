@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using ResiSecure.Configurations;
+using ResiSecure.Entities;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.BlobStoring.Database.EntityFrameworkCore;
@@ -26,7 +28,8 @@ public class ResiSecureDbContext :
     IIdentityDbContext
 {
     /* Add DbSet properties for your Aggregate Roots / Entities here. */
-
+    public DbSet<Household> Households { get; set; }
+    public DbSet<Property> Properties { get; set; }
 
     #region Entities from the modules
 
@@ -80,12 +83,7 @@ public class ResiSecureDbContext :
         builder.ConfigureBlobStoring();
         
         /* Configure your own tables/entities inside here */
-
-        //builder.Entity<YourEntity>(b =>
-        //{
-        //    b.ToTable(ResiSecureConsts.DbTablePrefix + "YourEntities", ResiSecureConsts.DbSchema);
-        //    b.ConfigureByConvention(); //auto configure for the base class props
-        //    //...
-        //});
+        new HouseHoldConfiguration().Configure(builder.Entity<Household>());
+        new PropertyConfiguration().Configure(builder.Entity<Property>());
     }
 }

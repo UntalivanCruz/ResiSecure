@@ -4,6 +4,40 @@
     "AppName": "ResiSecure",
     "Menu:Home": "Home",
     "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information visit",
-    "Welcome": "Welcome"
+    "Welcome": "Welcome",
+    "IdentificationNumber": "Identification Number",
+    "IdentificationType": "Identification Type",
+    "Relationship": "Relationship",
+    "HouseholdId": "Household",
+    "Passport": "Passport",
+    "NationalId": "National ID",
+    "DriverLicense": "Driver's License",
+    "SocialSecurityNumber": "Social Security Number",
+    "Other": "Other",
+    "Self": "Self",
+    "Spouse": "Spouse",
+    "Child": "Child",
+    "Parent": "Parent",
+    "Sibling": "Sibling",
+    "Grandparent": "Grandparent",
+    "Grandchild": "Grandchild",
+    "UncleAunt": "Uncle or Aunt",
+    "NephewNiece": "Nephew or Niece",
+    "Cousin": "Cousin",
+    "Roommate": "Roommate",
+    "Caregiver": "Caregiver",
+    "Tenant": "Tenant",
+    
+    "Permission:ResiSecure": "ResiSecure",
+    "Permission:Properties": "Properties",
+    "Permission:Properties.Create": "Creating new Properties",
+    "Permission:Properties.Edit": "Editing Properties",
+    "Permission:Properties.Delete": "Deleting Properties",
+    
+    "Permission:Households": "Households",
+    "Permission:Households.Create": "Creating new Households",
+    "Permission:Households.Edit": "Editing Households",
+    "Permission:Households.Delete": "Deleting Households"
+    
   }
 }

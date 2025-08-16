@@ -1,5 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Volo.Abp.Identity;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using ResiSecure.Enums;
+using ResiSecure.Localization;
+using Volo.Abp.Localization;
 using Volo.Abp.ObjectExtending;
 using Volo.Abp.Threading;
 
@@ -44,26 +47,32 @@ public static class ResiSecureModuleExtensionConfigurator
          * with a high level, easy to use API.
          *
          * Example: Add a new property to the user entity of the identity module
-
+        */
            ObjectExtensionManager.Instance.Modules()
               .ConfigureIdentity(identity =>
               {
                   identity.ConfigureUser(user =>
                   {
-                      user.AddOrUpdateProperty<string>( //property type: string
-                          "SocialSecurityNumber", //property name
+                      user.AddOrUpdateProperty<IdentificationType>("IdentificationType");
+                      user.AddOrUpdateProperty<string>(
+                          "IdentificationNumber",
                           property =>
                           {
-                              //validation rules
-                              property.Attributes.Add(new RequiredAttribute());
                               property.Attributes.Add(new StringLengthAttribute(64) {MinimumLength = 4});
-
-                              //...other configurations for this property
+                          }
+                      );
+                      user.AddOrUpdateProperty<Relationship>("Relationship");
+                      user.AddOrUpdateProperty<Guid?>(
+                          "HouseholdId",
+                          property =>
+                          {
+                              property.UI.Lookup.Url = "/api/app/household";
+                              property.UI.Lookup.DisplayPropertyName = "name";
                           }
                       );
                   });
               });
-
+         /*
          * See the documentation for more:
          * https://docs.abp.io/en/abp/latest/Module-Entity-Extensions
          */
